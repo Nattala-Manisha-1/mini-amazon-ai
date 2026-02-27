@@ -27,9 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-khv$)3b)*mz9dnff^#0+-@p=j)v9=w03!wwig8c8vr1n^7!toa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+#DEBUG = False
+DEBUG = os.getenv("DEBUG", "False") == "True"
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['mini-amazon-nm-2026.onrender.com']
 
 
 # Application definition
